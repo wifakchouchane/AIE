@@ -11,9 +11,22 @@ class addArticle extends Controller
     $article->Categ = $req->get('Categories');
     $article->Title = $req->get('Title');
     $article->Description = $req->get('Description');
-    // here !
-    // $article->articleImage = ;
+    $image = $req->uploadPhoto;
+    $imagename = time().'.'.$image->getClientoriginalExtension();
+    $req->uploadPhoto->move('dossierarticle',$imagename);
+    $article->articleImage = $imagename;
+
     $article->save();
+    return 'done_with_success';
+
+    }
+    public function index()
+    {
+        $article = articles::all();
+        return view('article.article',['articles'=>$article]);
+
+    }
+    public function sendEmail(){
 
     }
 }

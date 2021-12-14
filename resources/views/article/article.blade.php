@@ -28,16 +28,15 @@
              @foreach($articles as $article)
              <div class="media">
                 <div class="media-left">
-                    <img src="{{$article->articleImage}}" width="100" heigth="100" class="img-fluid rounded-circle"alt="">
+                    <img src="dossierarticle/{{$article->articleImage}}" width="100" heigth="100" class="img-fluid rounded-circle"alt="">
                 </div>
                 <div class="media-body">
                     <h3 class="text-info">
                         <a href="#" class="btn btn-link">{{$article->Title}}</a>
                     </h3>
                     <p class="d-flex flex-row justify-content-start">
-
-                        <span class="badge badge-danger mx-3"> Description: {{$article->Description}}</span>
-                        <span class="badge badge-primary"> catégorie: {{$article->categ}} </span>
+                        <span class="badge bg-danger mx-3"> Description: {{$article->Description}}</span>
+                        <span class="badge bg-primary"> catégorie: {{$article->categ}} </span>
                     </p>
                 </div>
             </div>
@@ -47,4 +46,3 @@
 </div>
     </div>
 @endsection
-

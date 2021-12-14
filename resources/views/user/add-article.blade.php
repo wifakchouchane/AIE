@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="" enctype="multipart/form-data ">
+<form method="post" action="" enctype="multipart/form-data" >
     @csrf
   <div class="mb-3">
 <div>
